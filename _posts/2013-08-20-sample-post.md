@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Another sample
-tags: [jekyll, syntax]
+title: Sample post
+tags: [code, jekyll]
 categories:
 - blog
 ---
