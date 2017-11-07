@@ -51,9 +51,17 @@ If needed , it can changed by:
 
     sysctl vm.swappiness=10
 
-Or change it permentry:
+Or change it permanently:
 
     echo "vm.swappiness=10" >> /etc/sysctl.conf
+
+5, Others
+    
+    df -Thi  
+Count partition inode usage.
+
+    find / -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n  
+inode useage count.
 
 ---
 end
