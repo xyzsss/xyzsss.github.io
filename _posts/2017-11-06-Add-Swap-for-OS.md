@@ -14,7 +14,8 @@ categories:
 
 0, Check swap status
 
-    swapon -s
+    swapon -s 
+
 1, Check file system
 
     df
@@ -27,19 +28,22 @@ categories:
     swapon /swapfile
 
 3, Make it effect when sys reboot
+
     echo "/swapfile          swap            swap    defaults        0 0" >> /etc/fstab
     chown root:root /swapfile 
     chmod 0600 /swapfile
 
 4, Check swap space status
 
-    swapon -s
+    swapon -s  
 or  
 
-    free -m
+    free -m  
+
 4, Adjust for system
 
-    cat /proc/sys/vm/swappiness
+    cat /proc/sys/vm/swappiness  
+
 a value from 0 to 100,if comes to 100,it means system use swap often and usually, too soon.
 RAM is much faster than swap space.  
 
