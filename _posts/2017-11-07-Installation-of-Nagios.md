@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Nagios install on CentOS6
-tags: [jekyll, syntax]
+tags: [Nagios, CentOS6, Installation]
 categories:
 - blog
 ---
 
-# Note
+## Note  
 ---
 
 #### ref: [How to Install Nagios 4.3.4 on RHEL, CentOS and Fedora](https://www.tecmint.com/install-nagios-in-linux/)  
