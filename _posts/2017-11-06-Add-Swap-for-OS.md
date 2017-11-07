@@ -36,6 +36,7 @@ categories:
 4, Check swap space status
 
     swapon -s  
+
 or  
 
     free -m  
@@ -58,9 +59,11 @@ Or change it permanently:
 5, Others
     
     df -Thi  
+
 Count partition inode usage.
 
     find / -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n  
+
 inode useage count.
 
 ---
