@@ -59,9 +59,8 @@ The version of snipe-it is 4.0.15,which is the newest now.
 	docker run --name snipe-mysql --env-file=my_env_file -d -p 3306:3306 mysql:5.6
 
 	Explaination:
-		d, 成功启动容器后输出容器的完整ID
-		p, 端口映射
-		e, 配置信息  
+		d, print the container id after start it success
+		p, port map 
 
 #### 4, Start snipeit service  
 	
