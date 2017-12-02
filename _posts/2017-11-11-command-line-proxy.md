@@ -12,13 +12,13 @@ categories:
 ##### ENV:linux/unix
 
 
-0, Check the public ip first:
+####0, Check the public ip first:
     
 ```
 curl icanhazip.com
 ```
 
-2, Enable proxy with commands below:
+####2, Enable proxy with commands below:
 
 ```
 export http_proxy="http://proxy.exyum.com:7777/"
@@ -26,12 +26,12 @@ export https_proxy="http://proxy.exyum.com:7777/"
 export no_proxy="host1,localhost"
 ```
 
-3, Check proxyable
+####3, Check proxyable
 ```
 curl icanhazip.com
 ```
 
-4, suggestion:
+####4, suggestion:
 add it to `~/.bashrc` file
 
 ```
@@ -51,6 +51,8 @@ function disable-proxy(){
 }
 ```
 
+
 Then ,use it `enable-proxy` to enable it and `disable-proxy` to disable it.
+
 ---
 end
