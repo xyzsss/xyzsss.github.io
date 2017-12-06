@@ -278,9 +278,10 @@ Los：
     
     kubectl --kubeconfig /etc/kubernetes/kubelet.conf get pods
 
+11, ScreenShot
+    ![success pic](https://raw.githubusercontent.com/xyzsss/xyzsss.github.io/master/assets/images/k8s-pic.png)
 
-
-11, REF
+12, REF
 
 - http://niuhp.com/docker/kubernetes-cluster-on-centos7-64.html
 
