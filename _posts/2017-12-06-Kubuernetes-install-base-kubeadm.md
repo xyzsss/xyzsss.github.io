@@ -12,36 +12,6 @@ categories:
 ##### ENV: CentOS 7
 
 
-0, Check swap status
-
-    swapon -s 
-
-1, Check file system
-
-    df
-
-2, Create and Enable Swap file
-    The filesize of swap space is 2048k(2GB).
-
-    dd if=/dev/zero of=/swapfile bs=1024 count=2048k
-    mkswap /swapfile
-    swapon /swapfile
-
-3, Make it effect when sys reboot
-
-    echo "/swapfile          swap            swap    defaults        0 0" >> /etc/fstab
-    chown root:root /swapfile 
-    chmod 0600 /swapfile
-
-4, Check swap space status
-
-    swapon -s  
-
-or  
-
-    free -m  
-
-    
 
 USED FOR INTERNAL DEV ENVIRONMENT,NOT RECOMMEND FOR PRO.
 
@@ -52,16 +22,13 @@ Updated: 2017-12-6
 1, OUTLINE
 
 - BASE SETTING
-
 - Docker
 - Kubectl
 - Kubelet && kubeadm
 
-
-
 2, BASE SETTING
 
-Images and files donwload 
+Images and files donwload
 
 Link：https://pan.baidu.com/s/1eRMdwu2 Pass：nucm
 
@@ -148,7 +115,7 @@ kubectl cluster-info should get cluster  info failed ,it's ok.It was used to ver
 
 
 
-5, YUM repo for kubernetes 
+5, YUM repo for kubernetes
 
 Add kubernetes repo base Aliyun to install kubelet and kubeadm.
 
@@ -267,13 +234,31 @@ Use token to register
 
 download the yaml files:https://github.com/kubernetes/heapster/tree/master/deploy/kube-config/influxdb
 
-Modify file grafana-service.yaml the port 80 to 3000 incase conflict.
+- grafana.yaml
+- heapster.yaml
+- influxdb.yaml
 
-    kubectl create -f .
+Modify file grafana-service.yaml the port 80 to 3000 incase conflict.
 
 To expose the port uncomment below:
 
     type: NodePort
+
+Install：
+
+    kubectl create -f .
+
+
+
+Scene：heapster安装成功但是没有具体视图
+
+Los：
+
+    E0903 07:09:35.016005 1 reflector.go:190] k8s.io/heapster/metrics/util/util.go:51: Failed to list *v1.Node: User "system:serviceaccount:kube-system:heapster" cannot list nodes at the cluster scope. (get nodes)
+
+定义一个名为 heapster 的 ServiceAccount，然后将它和 Cluster Role view 绑定
+
+    kubectl apply -f https://github.com/kubernetes/heapster/blob/master/deploy/kube-config/rbac/heapster-rbac.yaml
 
 
 
@@ -298,7 +283,6 @@ To expose the port uncomment below:
 11, REF
 
 - http://niuhp.com/docker/kubernetes-cluster-on-centos7-64.html
-
 
 ---
 end
