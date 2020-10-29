@@ -18,7 +18,9 @@ categories:
     - 安装基本依赖  
     - 升级 openssl  
     - 升级 openssh   
+
 ## 内容
+
 ```
 # 1，install dependency
 yum install -y gcc-c++ glibc make autoconf openssl openssl-devel pam-devel wget
