@@ -10,7 +10,8 @@ categories:
 二级目录 /files 开启文件列表显示,访问方式为 http://site.com/files/
 alias 声明虚拟目录
 
-
+解释
+```
 location /files/ {                                                                                                                                                        
 	alias /usr/share/nginx/html/downloads/;
 	@ alias 声明虚拟目录
@@ -25,9 +26,10 @@ location /files/ {
 	@ Nginx也没找到对应文件的扩展名的话，就使用默认的Type
 
 }   
+```
 
-
-
+例子
+```
     location /files/ {                                                                                                                                                        
         alias /usr/share/nginx/html/downloads/;
         autoindex on;
@@ -35,7 +37,6 @@ location /files/ {
         autoindex_localtime on;
         default_type application/octet-stream;
     }   
+```
 
-
-end
 
