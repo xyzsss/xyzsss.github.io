@@ -39,4 +39,3 @@ location /files/ {
 
 end
 
-{% endhighlight %}
