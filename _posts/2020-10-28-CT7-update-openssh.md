@@ -65,8 +65,8 @@ cd openssh-8.4p1
 make && make install
 
 # 3.5，ssh config file /etc/ssh/sshd.config modify
-echo "UsePAM yes" >> /etc/ssh/sshd.config
-echo "PermitRootLogin yes" >> /etc/ssh/sshd.config
+echo "UsePAM yes" >> /etc/ssh/sshd_config
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 # 3.6，ssh old systemd files remove
 mv  /usr/lib/systemd/system/sshd.service  /usr/lib/systemd/system/sshd.service.bak
@@ -77,6 +77,7 @@ mv  /usr/lib/systemd/system/sshd.socket /usr/lib/systemd/system/sshd.socket.bak
 cp contrib/redhat/sshd.init  /etc/init.d/sshd
 /etc/init.d/sshd restart 
 # Also:  systemctl restart sshd
+systemctl daemon-reload
 ```
 
 
