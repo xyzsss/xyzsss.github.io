@@ -181,6 +181,8 @@ if [ "${counter}" -eq 0 ]; then
     systemctl stop keepalived
 fi
 ping 192.168.96.147 -w1 -c1 &>/dev/null
+# 解决脑裂
+# /sbin/arping -I eth0(network card) -c 3 -s 192.168.96.147(source ip) 192.168.96.254(gateway)
 if [ $? -ne 0 ]
 then
     systemctl stop keepalived
