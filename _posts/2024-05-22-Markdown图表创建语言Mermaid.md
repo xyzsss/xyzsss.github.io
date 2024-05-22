@@ -28,7 +28,7 @@ graph LR
     class A,B,C,D,E,F,G cert;
 ```
 效果图：
-![alt text](image.png)
+![success pic](https://raw.githubusercontent.com/xyzsss/xyzsss.github.io/master/assets/images/mermaid.png)
 
 
 Mermaid语法的基本结构如下：
