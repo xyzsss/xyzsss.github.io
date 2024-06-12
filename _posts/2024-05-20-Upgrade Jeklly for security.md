@@ -35,6 +35,7 @@ ruby-install 3.1.2 -- --enable-shared
 ### Centos
 
 ```
+# centos 7.9
 sudo yum install epel-release -y
 sudo yum install centos-release-scl -y
 sudo yum install gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-develop make bzip2 autoconf automake libtool bison iconv-devel sqlite-devel ncurses-devel gdbm-devel -y
@@ -59,7 +60,5 @@ bundle update kramdown
 git push
 ```
 Work fine!!!
-
-## todo
 
 ---
